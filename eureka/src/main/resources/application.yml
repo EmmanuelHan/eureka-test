@@ -1,0 +1,31 @@
+server:
+  port: 11552
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://admin:root123eCloud@127.0.0.1:11552/eureka
+    fetch-registry: false
+    register-with-eureka: false #是否将自己注册到Eureka服务中，本身就是所有无需注册
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+security:
+  basic:
+    enabled: false
+  user:
+    name: admin
+    password: root123eCloud
+
+jasypt:
+  encryptor:
+    password: n*YBh&*yGBYUG7g*TYNHJHJ89
+#    algorithm: PBEWithMD5AndDES
+#    iv-generator-classname: org.jasypt.iv.NoIvGenerator

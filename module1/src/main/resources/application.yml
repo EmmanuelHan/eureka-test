@@ -1,0 +1,14 @@
+server:
+  port: 11500
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:root123eCloud@127.0.0.1:11552/eureka
+spring:
+  application:
+    name: @project.artifactId@
+
+jasypt:
+  encryptor:
+    password: n*YBh&*yGBYUG7g*TYNHJHJ89
